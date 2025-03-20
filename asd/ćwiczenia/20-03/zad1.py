@@ -1,5 +1,14 @@
 def partition(A, l, r):
-  pivot = A[l]
+  a, b, c = A[l], A[(l + r) // 2], A[r]
+  pivot = c
+  
+  if (a < b) ^ (a < c):
+    pivot = a
+  elif (b < c) ^ (b < a):
+    pivot = b
+  else:
+    pivot = c
+  
   i = l
   j = r
   
