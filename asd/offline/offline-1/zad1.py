@@ -5,10 +5,17 @@ def quicksort(T: list[str]):
   
   if n <= 1:
     return T
+  
+  a, b, c = T[0], T[n // 2], T[n - 1]
 
-  ind = n // 2
-
-  pivot = T[ind]
+  pivot = a
+  
+  if (a < b) ^ (a < c):
+    pivot = a
+  elif (b < a) ^ (b < c):
+    pivot = b
+  else:
+    pivot = c
   
   left = []
   middle = []
@@ -24,11 +31,6 @@ def quicksort(T: list[str]):
         
   return quicksort(left) + middle + quicksort(right)
   
-#   left = [x for x in T if x < pivot]
-#   middle = [x for x in T if x == pivot]
-#   right = [x for x in T if x > pivot]
-  
-#   return quicksort(left) + middle + quicksort(right)
 
 def compare(w: str):
   pl = 0
@@ -48,12 +50,23 @@ def compare(w: str):
   
 def strong_string(T):
     n = len(T)
+    # maks = 0
+    # d = {}
   
     for i in range(n):
         if not compare(T[i]):
             T[i] = T[i][::-1]
         
-    T = quicksort(T)
+        # if T[i] in d:
+        #   d[T[i]] += 1
+        #   if d[T[i]] > maks:
+        #     maks = d[T[i]]
+        # else:
+        #   d[T[i]] = 1
+        #   if maks < 1:
+        #     maks = 1
+        
+    T = sorted(T)
     
     maks = 0
     current = 0
@@ -76,7 +89,7 @@ def strong_string(T):
 
 
 # Odkomentuj by uruchomic duze testy
-# runtests( strong_string, all_tests=True )
+runtests( strong_string, all_tests=True )
 
 # Zakomentuj gdy uruchamiasz duze testy
-runtests( strong_string, all_tests=True )
+# runtests( strong_string, all_tests=False )
