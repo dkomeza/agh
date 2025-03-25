@@ -3,7 +3,14 @@
 
 int main(void)
 {
-  printf("Hello\n");
+  for (int i = 0; i < 100; ++i)
+  {
+    memory[i] = Z0;
+  }
+
+  // Initial position and state
+  position = 0;
+  state = S0;
 
   while (shouldRun)
   {

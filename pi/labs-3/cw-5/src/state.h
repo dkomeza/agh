@@ -14,6 +14,7 @@ enum Symbol
 
 extern enum Symbol memory[100];
 extern int position;
+extern enum State state;
 extern int shouldRun;
 
 void step(void);

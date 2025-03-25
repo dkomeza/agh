@@ -15,3 +15,4 @@ void print_storage(void)
     printf("Item no: %d, name: %s, price: %f, vat: %d%, state: %d", i, storage[i].name, storage[i].cena, storage[i].vat, storage[i].stock);
   }
 }
+
