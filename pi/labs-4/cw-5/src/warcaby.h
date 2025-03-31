@@ -26,7 +26,8 @@ struct Field
 };
 
 void init_board(struct Field board[BOARD_SIZE][BOARD_SIZE]);
-void print_board(struct Field board[BOARD_SIZE][BOARD_SIZE], enum Player player);
-void show_possible_moves(struct Field board[BOARD_SIZE][BOARD_SIZE], int selected_pawn, enum Player player);
 void make_move(struct Field board[BOARD_SIZE][BOARD_SIZE], int selected_pawn, int selected_move, enum Player player);
 void player_change(enum Player *current_player);
+int check_win(struct Field board[BOARD_SIZE][BOARD_SIZE], enum Player player);
+int generate_possible_moves(struct Field board[BOARD_SIZE][BOARD_SIZE], int selected_pawn, enum Player player);
+void clear_marked_moves(struct Field board[BOARD_SIZE][BOARD_SIZE]);
