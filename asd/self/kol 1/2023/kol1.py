@@ -66,5 +66,5 @@ def maxrank(T):
 # zmien all_tests na True zeby uruchomic wszystkie testy
 runtests( maxrank, all_tests = True )
 
-# A =  [12, 17, 6, 7, 16, 13, 10, 19, 12, 17]
+A =  [12, 17, 6, 7, 16, 13, 10, 19, 12, 17]
 # print(maxrank(A))
