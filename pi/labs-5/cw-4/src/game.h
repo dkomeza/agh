@@ -2,7 +2,7 @@
 
 #include "utils.h"
 
-#define BOARD_SIZE 31
+#define BOARD_SIZE 101
 
 void init_board(int board[BOARD_SIZE][BOARD_SIZE]);
 void print_board(int board[BOARD_SIZE][BOARD_SIZE]);

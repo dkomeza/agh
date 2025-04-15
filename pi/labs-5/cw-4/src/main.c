@@ -4,7 +4,7 @@
 #include "game.h"
 #include "utils.h"
 
-#define MAX_MOVES 1024
+#define MAX_MOVES 100000
 
 int main(void)
 {
@@ -72,7 +72,7 @@ int main(void)
       printf("\033[%dA", BOARD_SIZE);
     }
 
-    usleep(50000);
+    // usleep(1000);
   }
 
   return 0;

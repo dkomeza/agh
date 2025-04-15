@@ -15,7 +15,7 @@ enum Direction
 typedef enum Direction direction_t;
 
 direction_t direction = RIGHT;
-int position[2] = {26, 26}; // x, y coordinates
+int position[2] = {0, 0}; // x, y coordinates
 int should_play = 1;
 int move_counter = 0;
 
@@ -32,6 +32,10 @@ void init_board(int board[BOARD_SIZE][BOARD_SIZE])
       board[i][j] = rand() % 8 + 1; // Random values between 1 and 8
     }
   }
+
+  // Set the starting position
+  position[0] = rand() % BOARD_SIZE;
+  position[1] = rand() % BOARD_SIZE;
 }
 
 void print_board(int board[BOARD_SIZE][BOARD_SIZE])
