@@ -4,7 +4,6 @@ from queue import Queue
 def longer(G,s,t):
     queue = Queue()
     
-    queue.
     pass
 
 # G = [[1,2], [0,3,9], [0,3], [1,2,4], [3, 5, 6], [4, 7], [4, 7], [5,6,8], [7], [1,10], [9,11], [10]]
