@@ -554,7 +554,8 @@ void updatePrice(FILE *file)
   }
 }
 
-// Funkcja do "usuwania" rekordu (wyszukiwanie po ID dziesiętnym)
+// Funkcja do "usuwania" rekordu (wyszukiwanie po ID)
+// Rekord nie jest fizycznie usuwany, tylko oznaczany jako usunięty
 void deleteRecord(FILE *file)
 {
   long total_records = countRecords(file);
